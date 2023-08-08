@@ -1,12 +1,13 @@
 import React from "react";
-import {View, Text} from "react-native";
+import { View, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 
 const Search = () => {
     return (
-        <View>
-            <Text>Profile Page</Text>
-        </View>
+        <SafeAreaView>
+            <Text>Search  Page</Text>
+        </SafeAreaView>
     )
 }
 

@@ -1,11 +1,32 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { TouchableOpacity, View, Text, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import styles from "./homeStyle";
+import { Ionicons, Fontisto } from "@expo/vector-icons";
+import { Welcome } from "../components";
+
 
 const Home = () => {
     return (
-        <View>
-            <Text>Home Page</Text>
-        </View>
+        <SafeAreaView>
+            <View style={styles.appBarWrapper}>
+                <View style={styles.appBar}>
+                    <Ionicons name="location-outline" size={24} />
+                    <Text style={styles.location}>Johannesburg, Gauteng</Text>
+                    <View style={{ alignItems: "flex-end" }}>
+                        <View style={styles.cartCount}>
+                            <Text style={styles.cartNumber}>8</Text>
+                        </View>
+                        <TouchableOpacity>
+                            <Fontisto name="shopping-bag" size={25} />
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </View>
+            <ScrollView>
+                <Welcome/> 
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 

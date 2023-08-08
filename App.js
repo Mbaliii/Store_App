@@ -4,6 +4,7 @@ import ButtomTabNavigation from "./navigation/BottomTabNavigation";
 import Home from './screens/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Cart } from './screens';
 
 
 
@@ -16,6 +17,10 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name='Button Navigation' component={ButtomTabNavigation}
           options={{ headerShown: false }} />
+
+        <Stack.Screen name="Cart" component={Cart}
+          options={{ headerShown: false }} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
