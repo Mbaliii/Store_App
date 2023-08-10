@@ -1,10 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
+import { SIZES } from '../../constants/theme'
+import ProductCardView from "./ProductCardView";
 
 const ProductRow = () => {
+    const products = [1, 2, 3, 4]
     return (
-        <View>
-            <Text>Product View Page</Text>
+        <View style={{ marginTop: SIZES.medium }}>
+            <FlatList data={products} renderItem={({ item }) => <ProductCardView />}
+                horizontal contentContainerStyle={{ columnGap: SIZES.medium }} />
         </View>
     )
 }
