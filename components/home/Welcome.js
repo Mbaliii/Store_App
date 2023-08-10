@@ -1,10 +1,13 @@
 import React from "react";
 import { Text, TouchableOpacity, View, TextInput } from "react-native";
 import styles from "./welcome.style";
-import { COLORS } from "../../constants";
-import { Feather } from "@expo/vector-icons";
+import { COLORS, SIZES } from "../../constants";
+import { Feather, Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+
 
 const Welcome = () => {
+    const navigation = useNavigation();
     return (
         <View>
             <View style={styles.container}>
@@ -17,8 +20,13 @@ const Welcome = () => {
                     <Feather name="search" size={24} style={styles.searchIcon}></Feather>
                 </TouchableOpacity>
                 <View style={styles.searchWrapper}>
-                    <TextInput style={styles.searchInput} value="" onPressIn={()=>{}}
-                    placeholder="What are you looking for?"/>
+                    <TextInput style={styles.searchInput} value="" onPressIn={()=>navigation.navigate("Search")}
+                        placeholder="What are you looking for ?" />
+                </View>
+                <View>
+                    <TouchableOpacity style={styles.searchBtn}>
+                        <Ionicons name="camera-outline" size={SIZES.xLarge} color={COLORS.offwhite}></Ionicons>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>

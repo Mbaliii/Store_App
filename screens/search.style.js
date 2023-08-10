@@ -1,24 +1,7 @@
 import { StyleSheet } from "react-native";
-import {COLORS,SIZES} from "../../constants/index";
-
+import { COLORS, SIZES } from "../constants/index";
 
 const styles = StyleSheet.create({
-    container: {
-        width: "100%"
-    },
-    welcomeTxt:{
-        fontSize: SIZES.xxLarge -5,
-        fontWeight:"bold",
-        marginTop: SIZES.xSmall,
-        marginHorizontal:12
-    },
-    welcomeText: (color) => ({
-        fontWeight: "bold",
-        fontSize: SIZES.xxLarge -5,
-        marginTop: SIZES.xSmall,
-        color: color,
-        marginHorizontal:SIZES.small
-    }),
     searchContainer: {
         flexDirection: "row",
         justifyContent: "center",
@@ -34,7 +17,7 @@ const styles = StyleSheet.create({
         color: COLORS.gray,
         marginTop: SIZES.small
     },
-    searchWrapper:{
+    searchWrapper: {
         flex: 1,
         backgroundColor: COLORS.secondary,
         marginRight: SIZES.small,
@@ -46,7 +29,7 @@ const styles = StyleSheet.create({
         height: "100%",
         paddingHorizontal: SIZES.small
     },
-    searchBtn:{
+    searchBtn: {
         width: 50,
         height: "80%",
         borderRadius: SIZES.medium,
@@ -54,6 +37,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
     }
-})
 
+})
 export default styles
